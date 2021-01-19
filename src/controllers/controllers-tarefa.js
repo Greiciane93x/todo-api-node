@@ -5,6 +5,8 @@ module.exports = (app)=> {
 
     app.post(`/tarefas`, (req, resp)=> {
         resp.send('<h1> Rota POST ativada- TAREFA</h1> ')
+	    console.log(`Corpo da requisição: ${req.body.tarefa}`)
+	    resp.send("ok"); 
     })
 
 } 
