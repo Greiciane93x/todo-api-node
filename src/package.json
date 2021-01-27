@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/app.js "
   },
   "author": "Greici Assis",
@@ -12,7 +12,10 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+    "install": "^0.13.0",
+    "node-fetch": "^2.6.1",
+    "node-pre-gyp": "^0.17.0",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
