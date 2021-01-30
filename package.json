@@ -1,0 +1,30 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "install": "^0.13.0",
+    "node-pre-gyp": "^0.17.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "sqlite3": "^5.0.0"
+  },
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greiciane93x/todo-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Greiciane93x/todo-api/issues"
+  },
+  "homepage": "https://github.com/Greiciane93x/todo-api#readme"
+}

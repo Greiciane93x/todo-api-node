@@ -1,19 +1,16 @@
-const express = require('express'); 
-const bodyParser = require('body-parser'); 
-const app = express(); 
-const port = 3000; 
-app.use(bodyParser.json()); 
-const controllersUsuario = require('./controllers/controllers-usuario'); 
-controllersUsuario(app); 
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser')
 
-const controllersTarefa = require('./controllers/controllers-tarefa'); 
-controllersTarefa(app); 
+app.use(bodyParser.json())
 
+const routes = require('./routes')
 
+const port = 3000
 
-app.listen(port, ()=> {
-    console.log(`APP rodando na porta ${port}`)
-})
+routes(app)
+
+app.listen(port, () => console.log(`Servidor online na porta ${port}`))
 
 
 
