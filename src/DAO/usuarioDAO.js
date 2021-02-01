@@ -38,6 +38,18 @@ class UsuarioDAO {
         }))
     }
 
+
+    static alterarUsuarioInBD(email, body){
+        return(new Promise ((resolve, reject) => {
+            bd.run(`UPDATE usuario SET email = 'alice@bol' WHERE email = ? ` , [email] ,  (err) =>{
+                if(err) reject(err)
+                else{
+                    resolve('Usuário alterado com sucesso!')
+                }
+            })
+        }))
+    }
+
  
 
 }

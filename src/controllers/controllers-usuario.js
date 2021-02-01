@@ -38,6 +38,16 @@ class Controller{
         })
     }
 
+    static alterarUsuario(){
+        return((req, resp) => {
+            UsuarioDAO.alterarUsuarioInBD(req.params.email).then(msg => resp.send(msg))
+            .catch(err => {
+                console.log(err)
+                resp.send
+            })
+        })
+    }
+
 
 } 
 
