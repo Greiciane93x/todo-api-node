@@ -7,10 +7,10 @@ Esse projeto é um CRUD - (Create, Read, Update, Delete)
 
 As rotas disponíveis são: __GET, POST, PUT e DELETE__
 
-Rota get => '/listar'
-Rota post => '/criar'
-Rota delete => '/deletar/:email' (deleção a partir do email colocado como parâmetro)
-Rota put => 'alterar/:email' (alteração a partir do email colocado como parâmetro)
+Rota get => '/listar' <br/> 
+Rota post => '/criar' <br/> 
+Rota delete => '/deletar/:email' (deleção a partir do email colocado como parâmetro) <br/> 
+Rota put => 'alterar/:email' (alteração a partir do email colocado como parâmetro) <br/> 
 
 As dependências são : *express, bodyParser, sqlite3* o que é possível encontrar todas elas no package.json 
 
