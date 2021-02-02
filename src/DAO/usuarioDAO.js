@@ -8,7 +8,7 @@ class UsuarioDAO {
                 err ? err : console.log(rows)
         })
     }
-    static async criaUsuarioInBD(body){
+    static async criaUsuarioInBD(body){ 
             await bd.run(`INSERT INTO usuario (email, senha) VALUES(? , ?)`, [body.email, body.senha])
 
     }
@@ -17,7 +17,8 @@ class UsuarioDAO {
              
     }
     static async alterarUsuarioInBD(email){
-          await  bd.run(`UPDATE usuario SET email = 'alice@bol' WHERE email = ? ` , [email])
+          await  bd.run(`UPDATE usuario SET email = 'bruno@bol' WHERE email = ? ` , [email])
+          
             
     }
 
