@@ -15,7 +15,7 @@ Rota put => 'alterar/:email' (alteração a partir do email colocado como parâm
 As dependências são : *express, bodyParser, sqlite3* o que é possível encontrar todas elas no package.json 
 
 
-É necessário utilização do insominia/postman para acessar
+É necessário utilização do insominia/postman para acessar as rotas
 
   __Roadmap__ :pushpin:
   - [ ] implementação do CRUD em tarefas 
