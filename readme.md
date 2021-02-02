@@ -17,6 +17,6 @@ As dependências são : *express, bodyParser, sqlite3* o que é possível encont
 
 É necessário utilização do insominia/postman para acessar as rotas
 
-  __Roadmap__ :pushpin:
+ :pushpin: __Roadmap__ :pushpin:
   - [ ] implementação do CRUD em tarefas 
   - [ ] implemetação de testes unitários
