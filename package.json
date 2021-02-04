@@ -5,8 +5,12 @@
   "main": "app.js",
   "dependencies": {
     "cors": "^2.8.5",
+    "heroku": "^7.47.12",
     "install": "^0.13.0",
     "node-pre-gyp": "^0.17.0"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "devDependencies": {
     "express": "^4.17.1",
@@ -14,7 +18,7 @@
     "sqlite3": "^5.0.0"
   },
   "scripts": {
-    "start": "nodemon ./src/app.js",
+    "start": "node ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
