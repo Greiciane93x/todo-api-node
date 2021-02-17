@@ -1,44 +1,73 @@
 const Tarefas = require('../models/tarefas.js')
+const Tarefa = require('../models/tarefas')
+const TarefasDAO = require('../DAO/tarefasDAO')
+const {response} = require('express');
+const { deletarUsuario } = require('./controllers-usuario.js');
 
+class ControllerTarefas {
 
-module.exports = (app)=> {
-    // app.get(`/tarefa`, (req, resp) =>  {
-    //     resp.send(`Rota Get Ok ${req.body.titulo}`)
-    // }) 
+    static buscaTarefas(){
+        return((req, resp) => {
+            try{
+                const ListaTarefas = TarefasDAO.buscaTarefasInBD(); 
+                resp.status(200).send(ListaTarefas); 
+            }catch(erro){
+                resp.status(400).send(erro); 
+            }
+        })
 
-    // app.post(`/tarefa`, (req, resp)=> {
+    }
+    static buscaTarefasPorId(){
         
-    //     resp.send(`Rota Post OK`)
-    // })
+        return((req, resp) => {
+            try {
+                var parametroId = req.params.id 
+                const  ListaTarefaPorId = TarefasDAO.buscaTarefaPorIdInBD(parametroId); 
+                resp.status(200).send(ListaTarefaPorId); 
+            }catch(erro) {
+                resp.status(400).send(console.log(erro)) 
+            }
+        })
+    }
+    static criaTarefa() {
+        return (req, resp) => {
+           try{
+                let tarefaBody = [req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario]; 
+                console.log(tarefaBody)
+                const insereTarefa = TarefasDAO.criaTarefaInBD(tarefaBody)
+                resp.status(200).send(insereTarefa)
+           }catch(erro){
+               resp.status(400).send(erro)
+           }
+        }
 
-    // app.delete(`/tarefa/:titulo`, (req, resp) => {
-    //     let taskDelete = []; 
-    //     for(let i = 0; i < bd.tarefas.length; i++){
-    //         if(bd.tarefas[i].titulo !== req.params.titulo){
-    //             taskDelete.push(bd.tarefas[i])
-    //         }
-            
-    //     }
-    //     bd.tarefas = taskDelete 
-    //     resp.send(`Rota de deleção ativada! ` )
-    // })
+    }
+    static deletarTarefa(){
+        return(req, resp) => {
+            try{
+                let parametroId = req.params.id
+                const deletaTarefa = TarefasDAO.deletaTarefaInBD(parametroId); 
+                resp.status(200).send(deletaTarefa)
+            }catch(erro){
+                resp.status(400).send(erro); 
+            }
+        }
+    }
 
-    // const atualizaTarefa = (titulo, body) => {
+    static alterarTarefa(){
+        return((req, resp) => {
+            try{
+                let parametroId = req.params.id 
+                let bodyTarefa = [req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario, parametroId]
+                const alterarTarefa = TarefasDAO.alteraTarefaInBD(bodyTarefa); 
+                resp.send(200).send(alterarTarefa); 
+            }catch(erro){
+                resp.send(400).send(erro); 
+            }
 
-    //     for(let task of bd.tarefas){
-    //         if(task.titulo === titulo){
-    //             task.descricao = body.descricao; 
-    //             task.status = body.status;
-    //             task.data_criacao = body.status;
-    //         }
-         
-    //     }
-    // } 
+        })
+    }
 
-    // app.put(`/tarefa/:titulo`, (req, resp) => {
-    //     atualizaTarefa(req.params.titulo, req.body)
-    //     resp.send(`Tarefa atualizada!`)
-    // })
+}
 
-} 
-
+module.exports = ControllerTarefas

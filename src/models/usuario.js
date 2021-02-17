@@ -1,4 +1,4 @@
-
+const Joi 
 class Usuario { 
    constructor(nome, email, senha){
        this.nome = nome; 

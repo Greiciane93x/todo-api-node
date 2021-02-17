@@ -3,26 +3,48 @@ const bd = require('../infra/sqlite-db')
 
 class UsuarioDAO {
 
-    static async buscaTodosUsuariosInBD(){
-        await bd.all("SELECT * FROM usuario" , [] , (err, rows) => {
-                err ? err : console.log(rows)
+
+
+
+    static buscaTodosUsuariosInBD() {
+        bd.all("SELECT * FROM USUARIOS", [], (erro, linhas) => {
+            erro ? erro : console.log(linhas)
         })
     }
-    static async criaUsuarioInBD(body){ 
-            await bd.run(`INSERT INTO usuario (email, senha) VALUES(? , ?)`, [body.email, body.senha])
+
+    static buscaUsuarioPorId(resultParam) {
+        return new Promise((resolve, reject) => {
+                bd.get(`SELECT * FROM USUARIOS WHERE ID = ? `, resultParam, (erro, linha) => {
+                    erro ? reject(erro) : resolve(console.log(linha))
+
+            })
+
+        })
+    }
+    static criaUsuarioInBD(resultsBody) {
+        return new Promise((resolve, reject) => {
+            bd.run(`INSERT INTO USUARIOS (nome, email, senha) VALUES(? , ?,  ?)`, resultsBody, (erro) => {
+                erro ? reject(erro) : resolve("Usuário adicionado!");
+            })
+        })
+    }
+    static deleteUsuarioInBD(resultParam) {
+        return new Promise((resolve, reject) => {
+            bd.run(`DELETE from USUARIOS WHERE ID = ?`, resultParam, (erro) => {
+                erro ? reject(erro) : resolve("Usuário deletado!");
+            })
+        })
+    }
+
+    static alterarUsuarioInBD(resultBody) {
+        return new Promise((resolve, reject) => {
+
+            bd.run(`UPDATE USUARIOS SET nome = ?, email = ?, senha = ? WHERE (id = ?)`, resultBody, (erro) => {
+                erro ? reject(erro) : resolve("Usuário Alterado!");
+            })
+        })
 
     }
-    static async deleteUsuarioInBD(email){
-           await bd.run(`DELETE from usuario WHERE email = ?` , [email])
-             
-    }
-    static async alterarUsuarioInBD(email){
-          await  bd.run(`UPDATE usuario SET email = 'bruno@bol' WHERE email = ? ` , [email])
-          
-            
-    }
-
- 
 
 }
 
