@@ -7,10 +7,21 @@ Esse projeto é um CRUD - (Create, Read, Update, Delete) <br/>
 
 Rotas disponíveis: __GET, POST, PUT e DELETE__
 
-Rota get => '/listar' <br/> 
-Rota post => '/criar' <br/> 
-Rota delete => '/deletar/:email' (deleção a partir do email colocado como parâmetro) <br/> 
-Rota put => 'alterar/:email' (alteração a partir do email colocado como parâmetro) <br/> 
+  // Rotas Usuário
+    [GET] - Rota de busca =>  '/usuario'
+    [GET] - Rota de busca por id => '/usuario/:id'
+    [POST] - Rota para criar usuario => '/usuario'
+    [DELETE] - Rota para deletar usuario por id específico => '/usuario/:id'
+    [POST] - Rota para alterar usuario por id específico => '/usuario/:id'
+    
+   // Rotas Tarefa 
+    [GET] - Rota de busca => '/tarefa'
+    [GET] - Rota de busca por id => '/tarefa/:id'
+    [POST] - Rota para criar tarefa => '/tarefa'
+    [DELETE] - Rota para deletar tarefa por id específico => '/tarefa/:id'
+    [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id'
+
+
 
 As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json <br/> 
 Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
