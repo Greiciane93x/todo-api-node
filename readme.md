@@ -28,7 +28,7 @@ Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
 
 É necessário utilização do insominia/postman para acessar as rotas
 
-  __Roadmap__ :pushpin:
+  :pushpin: __Roadmap__ :pushpin:
   - [x] implementação do CRUD em tarefas 
   - [x] implemetação de testes unitários
   - [ ] Utilização de async/await para operações no banco (DAO)
