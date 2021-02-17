@@ -3,7 +3,7 @@ __Nome:__ Greiciane Araujo de Assis
 
 
 Esse projeto é um CRUD - (Create, Read, Update, Delete) <br/> 
-É capaz criar, listar, atualizar e deletar um usuário específico
+Tem a finalidade de criar, listar, atualizar e deletar um usuário e uma tarefa específica. 
 
 Rotas disponíveis: __GET, POST, PUT e DELETE__
 
