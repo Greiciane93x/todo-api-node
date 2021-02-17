@@ -8,18 +8,18 @@ Esse projeto é um CRUD - (Create, Read, Update, Delete) <br/>
 Rotas disponíveis: __GET, POST, PUT e DELETE__
 
   // Rotas Usuário
-    [GET] - Rota de busca =>  '/usuario'
-    [GET] - Rota de busca por id => '/usuario/:id'
-    [POST] - Rota para criar usuario => '/usuario'
-    [DELETE] - Rota para deletar usuario por id específico => '/usuario/:id'
-    [POST] - Rota para alterar usuario por id específico => '/usuario/:id'
+    [GET] - Rota de busca =>  '/usuario' <br/> 
+    [GET] - Rota de busca por id => '/usuario/:id' <br/> 
+    [POST] - Rota para criar usuario => '/usuario' <br/> 
+    [DELETE] - Rota para deletar usuario por id específico => '/usuario/:id' <br/> 
+    [POST] - Rota para alterar usuario por id específico => '/usuario/:id' <br/> 
     
    // Rotas Tarefa 
-    [GET] - Rota de busca => '/tarefa'
-    [GET] - Rota de busca por id => '/tarefa/:id'
-    [POST] - Rota para criar tarefa => '/tarefa'
-    [DELETE] - Rota para deletar tarefa por id específico => '/tarefa/:id'
-    [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id'
+    [GET] - Rota de busca => '/tarefa' <br/>
+    [GET] - Rota de busca por id => '/tarefa/:id' <br/> 
+    [POST] - Rota para criar tarefa => '/tarefa' <br/> 
+    [DELETE] - Rota para deletar tarefa por id específico => '/tarefa/:id' <br/> 
+    [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id' <br/> 
 
 
 
