@@ -12,11 +12,14 @@ Rota post => '/criar' <br/>
 Rota delete => '/deletar/:email' (deleção a partir do email colocado como parâmetro) <br/> 
 Rota put => 'alterar/:email' (alteração a partir do email colocado como parâmetro) <br/> 
 
-As dependências são : *express, bodyParser, sqlite3* o que é possível encontrar todas elas no package.json 
-
+As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json 
+Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
 
 É necessário utilização do insominia/postman para acessar as rotas
 
- :pushpin: __Roadmap__ :pushpin:
-  - [ ] Implementação do CRUD em tarefas 
-  - [ ] Implemetação de testes unitários
+  __Roadmap__ :pushpin:
+  - [x] implementação do CRUD em tarefas 
+  - [x] implemetação de testes unitários
+  - [ ] Utilização de async/await para operações no banco (DAO)
+  - [ ] Validação e verificação de dados (tipo e características) utilizando models
+ -  [ ] Utilização de algum ORM ou ODM 
