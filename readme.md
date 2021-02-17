@@ -12,7 +12,7 @@ Rota post => '/criar' <br/>
 Rota delete => '/deletar/:email' (deleção a partir do email colocado como parâmetro) <br/> 
 Rota put => 'alterar/:email' (alteração a partir do email colocado como parâmetro) <br/> 
 
-As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json 
+As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json <br/> 
 Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
 
 É necessário utilização do insominia/postman para acessar as rotas
