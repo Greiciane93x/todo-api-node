@@ -6,10 +6,6 @@ describe("GET /usuario", () => {
         return request(ApiUrl)
         .get("/usuario")
         .expect(4)
-        .then(response => {
-            expect(response.body.nome).toEqual("Mirtes Faria Lima")
-        })
-     
     })
 })
 describe("GET /usuario/{id}", () => {
