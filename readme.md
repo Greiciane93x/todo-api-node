@@ -32,7 +32,7 @@ Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
   - [x] implementação do CRUD em tarefas 
   - [x] implemetação de testes unitários
   - [ ] Utilização de async/await para operações no banco (DAO)
-  - [x] Validação e verificação de dados (tipo e características)
+  - [x] Validação e verificação de dados (tipo e características)<br/> 
   __Não permite cadastrar campo de usuários e tarefas vazios__
   - [ ] Utilização de algum ORM ou ODM 
 
