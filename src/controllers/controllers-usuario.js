@@ -1,5 +1,6 @@
 const Usuario = require('../models/usuario.js')
 const UsuarioDAO = require('../DAO/usuarioDAO')
+
 const { response } = require('express')
 
 
@@ -40,11 +41,26 @@ class ControllerUsuario {
     }
 
     static criaUsuario() {
+        
         return (req, resp) => {
-           try{
+            try{
+                
                 let usuarioBody = [req.body.nome, req.body.email, req.body.senha]; 
-                const insereUsuario = UsuarioDAO.criaUsuarioInBD(usuarioBody)
-                resp.status(200).send(insereUsuario)
+                
+                for(let i = 0; i < usuarioBody.length; i++){
+                    if(usuarioBody[0] === ''){
+                        return resp.status(400).send('Campo Nome obrigatório ')
+                    }else if(usuarioBody[1] === ''){
+                        return resp.status(400).send('Campo Email obrigatório')
+                    }else if(usuarioBody[2] === '' ){
+                        return resp.status(400).send('Campo Senha obrigatório')
+                    }else{
+                        const insereUsuario = UsuarioDAO.criaUsuarioInBD(usuarioBody)
+                       return resp.status(201).send(insereUsuario); 
+                    }
+                }
+               
+                
            }catch(erro){
                resp.status(400).send(erro)
            }

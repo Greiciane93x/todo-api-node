@@ -33,9 +33,25 @@ class ControllerTarefas {
         return (req, resp) => {
            try{
                 let tarefaBody = [req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario]; 
-                console.log(tarefaBody)
-                const insereTarefa = TarefasDAO.criaTarefaInBD(tarefaBody)
-                resp.status(200).send(insereTarefa)
+
+                for(let i = 0; i < tarefaBody.length; i++){
+                    if(tarefaBody[0] === ''){
+                        return resp.status(400).send('Campo Título Obrigatório!')
+                    }else if(tarefaBody[1] === ''){
+                        return resp.status(400).send('Campo Descrição Obrigatório!')
+                    }else if(tarefaBody[2] === ''){
+                        return resp.status(400).send('Campo Status Obrigatório!')
+                    }else if(tarefaBody[3] === ''){
+                        return resp.status(400).send('Campo Data Criação Obrigatório!')
+                    }else if(tarefaBody[4] === ''){
+                        return resp.status(400).send('Campo Usuário Obrigatório!')
+                    }else{
+                        const insereTarefa = TarefasDAO.criaTarefaInBD(tarefaBody)
+                        return  resp.status(201).send(insereTarefa)
+
+                    }
+                }
+
            }catch(erro){
                resp.status(400).send(erro)
            }

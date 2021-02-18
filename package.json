@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "cors": "^2.8.5",
+    "express-validator": "^6.9.2",
     "heroku": "^7.47.12",
     "install": "^0.13.0",
     "jest": "^26.6.3",
