@@ -32,5 +32,7 @@ Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
   - [x] implementação do CRUD em tarefas 
   - [x] implemetação de testes unitários
   - [ ] Utilização de async/await para operações no banco (DAO)
-  - [ ] Validação e verificação de dados (tipo e características) utilizando models
- -  [ ] Utilização de algum ORM ou ODM 
+  - [x] Validação e verificação de dados (tipo e características)
+  __Não permite cadastrar campo de usuários e tarefas vazios__
+  - [ ] Utilização de algum ORM ou ODM 
+
