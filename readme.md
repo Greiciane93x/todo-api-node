@@ -21,7 +21,7 @@ Rotas disponíveis: __GET, POST, PUT e DELETE__
     [DELETE] - Rota para deletar tarefa por id específico => '/tarefa/:id' <br/> 
     [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id' <br/> 
 
-As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json <br/>  
+As dependências são : *express, bodyParser, sqlite3, test e SuperTest*, o que é possível encontrar todas elas no package.json <br/>  
 Para instalar essas dependências é necessário utilizar __npm i/instal <nome_da_dependência>__
 
 
