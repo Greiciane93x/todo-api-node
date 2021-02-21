@@ -21,17 +21,15 @@ Rotas disponíveis: __GET, POST, PUT e DELETE__
     [DELETE] - Rota para deletar tarefa por id específico => '/tarefa/:id' <br/> 
     [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id' <br/> 
 
-__Não permite cadastrar campo de usuários e tarefas vazios__
+As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json 
+Para instalar essas dependências é necessário utilizar __npm i/instal <nome_da_dependência>__
 
-As dependências são : *express, bodyParser, sqlite3, test e SuperTest* o que é possível encontrar todas elas no package.json <br/> 
-Para instalar é necessário utilizar __npm i/instal <nome_da_dependência>__
 
 É necessário utilização do insominia/postman para acessar as rotas
 
   :pushpin: __Roadmap__ :pushpin:
   - [x] implementação do CRUD em tarefas 
   - [x] implemetação de testes unitários
-  - [ ] Utilização de async/await para operações no banco (DAO)
+  - [x] Utilização de async/await para operações no banco (DAO)
   - [x] Validação e verificação de dados (tipo e características)
-  - [ ] Utilização de algum ORM ou ODM 
-
+  __Não permite cadastrar campo de usuários e tarefas vazios__
