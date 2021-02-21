@@ -32,4 +32,4 @@ Para instalar essas dependências é necessário utilizar __npm i/instal <nome_d
   - [x] implemetação de testes unitários
   - [x] Utilização de async/await para operações no banco (DAO)
   - [x] Validação e verificação de dados (tipo e características) <br/> 
-__Não permite cadastrar campo de usuários e tarefas vazios__
+* __Não permite cadastrar campo de usuários e tarefas vazios__
