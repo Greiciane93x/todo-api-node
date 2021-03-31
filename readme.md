@@ -22,10 +22,10 @@ Rotas disponíveis: __GET, POST, PUT e DELETE__
     [PUT] - Rota para alterar tarefa por id específico => '/tarefa/:id' <br/> 
 
 As dependências são : *express, bodyParser, sqlite3, test e SuperTest*, o que é possível encontrar todas elas no package.json <br/>  
-Para instalar essas dependências é necessário utilizar __npm i/instal <nome_da_dependência>__
+Para instalar essas dependências é necessário utilizar __npm i/install <nome_da_dependência>__
 
 
-É necessário utilização do insominia/postman para acessar as rotas
+É necessário utilização do insomnia/postman para acessar as rotas
 
   :pushpin: __Roadmap__ :pushpin:
   - [x] implementação do CRUD em tarefas 
