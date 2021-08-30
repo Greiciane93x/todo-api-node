@@ -2,16 +2,11 @@ const { response } = require('express')
 const bd = require('../infra/sqlite-db')
 
 class UsuarioDAO {
-
-
-
-
     static buscaTodosUsuariosInBD() {
         bd.all("SELECT * FROM USUARIOS", [], (erro, linhas) => {
             erro ? erro : console.log(linhas)
         })
     }
-
     static buscaUsuarioPorId(resultParam) {
         return new Promise((resolve, reject) => {
                 bd.get(`SELECT * FROM USUARIOS WHERE ID = ? `, resultParam, (erro, linha) => {
